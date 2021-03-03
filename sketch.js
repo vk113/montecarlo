@@ -16,7 +16,7 @@ function setup(){
     let volume = document.getElementById("volume");
     document.getElementById("radius").innerHTML = radius;
 
-    cnv = createCanvas(displayWidth, displayHeight, WEBGL);
+    cnv = createCanvas(window.innerWidth, window.innerHeight, WEBGL);
     //cnv.mouseWheel(zoom);
     wuerfel = new Wuerfel(2*radius);
 
