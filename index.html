@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonteCarlo</title>
+    <script src="./p5.min.js"></script>
+    <script src="./sketch.js"></script>
+    <style>
+
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .stats{
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            left: 0; 
+            top: 0;
+            padding: 1em;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="stats" class="stats">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Radius: </td>
+                    <td id="radius"></td>
+                </tr>
+                <tr>
+                    <td>Punkte innerhalb: </td>
+                    <td id="inside"></td>
+                </tr>
+                <tr>
+                    <td>Punkte außerhalb: </td>
+                    <td id="outside"></td>
+                </tr>
+                <tr>
+                    <td>Geschätztes Volumen: </td>
+                    <td id="volume"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
