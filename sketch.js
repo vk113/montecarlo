@@ -17,7 +17,7 @@ function setup(){
     document.getElementById("radius").innerHTML = radius;
 
     cnv = createCanvas(window.innerWidth, window.innerHeight, WEBGL);
-    //cnv.mouseWheel(zoom);
+    perspective(PI / 3.0, width / height, 0.1, 500);
     wuerfel = new Wuerfel(2*radius);
 
 }
@@ -129,17 +129,3 @@ class ZufallsPunkt {
       strokeWeight(1);
     }
 }
-
-
-function zoom(event) {
-    // zoom according to direction of mouseWheelDeltaY rather than value
-    let sensitivityZoom = 0.0001;
-    let scaleFactor = cnv.height;
-    if (event.deltaY > 0) {
-    cnv._curCamera._orbit(0, 0, sensitivityZoom * scaleFactor);
-    } else {
-    cnv._curCamera._orbit(0, 0, -sensitivityZoom * scaleFactor);
-    }
-}   
-
-
