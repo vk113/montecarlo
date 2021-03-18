@@ -17,7 +17,7 @@ function setup(){
     document.getElementById("radius").innerHTML = radius;
 
     cnv = createCanvas(window.innerWidth, window.innerHeight, WEBGL);
-    perspective(PI / 3.0, width / height, 0.1, 500);
+    perspective(PI / 3.0, window.innerWidth / window.innerHeight, 0.1, 500);
     wuerfel = new Wuerfel(2*radius);
 
 }
